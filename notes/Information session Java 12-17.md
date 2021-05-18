@@ -160,7 +160,7 @@ A text block is processed by the Java compiler in three distinct steps:
 
 Trailing white space is most often unintentional, idiosyncratic, and insignificant. The Java compiler processes the content by removing incidental white space to yield what the developer intended.
 
-[hello](attachments/20210518073751.png)
+![hello](attachments/20210518073751.png)
 
 The following methods support text blocks:
 
