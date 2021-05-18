@@ -158,9 +158,9 @@ A text block is processed by the Java compiler in three distinct steps:
 2. Incidental white space surrounding the content, introduced to match the indentation of Java source code, is removed.
 3. Escape sequences in the content are interpreted. Performing interpretation as the final step means developers can write escape sequences such as \n without them being modified or deleted by earlier steps.
 
-Trailing white space is most often unintentional, idiosyncratic, and insignificant. The Java compiler processes the content by removing incidental white space to yield what the developer intended. 
+Trailing white space is most often unintentional, idiosyncratic, and insignificant. The Java compiler processes the content by removing incidental white space to yield what the developer intended.
 
-![[Pasted image 20210518073751.png]]
+[hello](attachments/20210518073751.png)
 
 The following methods support text blocks:
 
@@ -286,7 +286,7 @@ LOGGER.info(() -> "(x:%d, y:%d)".formatted(
 - The fields derived from the record components are final.
 - other...
 
-#### Additional notes
+#### Additional notes on records
 
 Local record classes
 
@@ -376,7 +376,7 @@ public final class FilledRectangle extends Rectangle { }
 public non-sealed class Square extends Shape { }
 ```
 
-#### Additional notes
+#### Additional notes on sealed classes
 
 - Exactly one of the modifiers final, sealed, and non-sealed must be used by each permitted subclass. It is not possible for a class to be:
   - both sealed (implying subclasses) and final (implying no subclasses), or
@@ -463,16 +463,16 @@ Before JDK14
 
 ```java
 Exception in thread "main" java.lang.NullPointerException
-	at info.HelpfulNullPointerExceptions.showUpperCase(HelpfulNullPointerExceptions.java:13)
-	at info.HelpfulNullPointerExceptions.main(HelpfulNullPointerExceptions.java:9)
+ at info.HelpfulNullPointerExceptions.showUpperCase(HelpfulNullPointerExceptions.java:13)
+ at info.HelpfulNullPointerExceptions.main(HelpfulNullPointerExceptions.java:9)
 ```
 
 After JDK14
 
 ```java
 Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String.toUpperCase(java.util.Locale)" because "str" is null
-	at info.HelpfulNullPointerExceptions.showUpperCase(HelpfulNullPointerExceptions.java:13)
-	at info.HelpfulNullPointerExceptions.main(HelpfulNullPointerExceptions.java:9)
+  at info.HelpfulNullPointerExceptions.showUpperCase(HelpfulNullPointerExceptions.java:13)
+  at info.HelpfulNullPointerExceptions.main(HelpfulNullPointerExceptions.java:9)
 ```
 
 ### Future features
@@ -480,7 +480,7 @@ Exception in thread "main" java.lang.NullPointerException: Cannot invoke "String
 - value inline classes
 - generic specialization
 
-##### Inline Types
+#### Inline Types
 
 https://wiki.openjdk.java.net/display/valhalla/L-World
 
@@ -494,7 +494,7 @@ Removing identity commitment enables optimizations such as
 - reducing cost of indirection and locality of reference with attendant cache miss penalties
 - reducing memory footprint and load on garbage collectors
 
-##### Specialization
+#### Specialization
 
 https://cr.openjdk.java.net/~briangoetz/valhalla/specialization.html
 
