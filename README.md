@@ -1,1 +1,1 @@
-# info-session-jdk-12-17-features
+# features-session-jdk-12-17-features
